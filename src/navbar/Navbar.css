@@ -1,0 +1,11 @@
+.navWrapper {
+  display: flex;
+  width: fit-content;
+  box-shadow: 5px 8px 6px black;
+}
+
+.link {
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 3px 10px;
+}
