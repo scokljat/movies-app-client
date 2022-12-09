@@ -1,7 +1,16 @@
 import React from "react";
+import Card from "../../components/card/Card";
+import "./Movies.css";
 
 function Movies() {
-  return <div>Movies</div>;
+  return (
+    <div className="cardContainer">
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </div>
+  );
 }
 
 export default Movies;
