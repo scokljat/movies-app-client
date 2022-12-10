@@ -1,8 +1,17 @@
+import { useNavigate } from "react-router-dom";
+
 import "./Card.css";
 
 function Card() {
+  const navigate = useNavigate();
+
   return (
-    <div className="cardWrapper">
+    <div
+      className="cardWrapper"
+      onClick={() => {
+        navigate("/movies/50");
+      }}
+    >
       <img
         src="https://imgv3.fotor.com/images/homepage-feature-card/enhance-photo-of-three-girls-playing-in-the-sunflower-garden.png"
         alt="movie"
