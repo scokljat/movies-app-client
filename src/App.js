@@ -1,20 +1,26 @@
-import "./App.css";
-import Navbar from "./navbar/Navbar";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+
+import Header from "./components/header/Header";
 import Movies from "./pages/movies/Movies";
 import TvShows from "./pages/tv-shows/TvShows";
 import Detail from "./pages/movies/detail/Detail";
+import "./App.css";
 
 function App() {
+  const location = useLocation();
+
   return (
     <div className="wrapper">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Navigate to="/movies" />} />
-        <Route path="/movies" element={<Movies />} />;
-        <Route path="/movies/:id" element={<Detail />} />
-        <Route path="/tv-shows" element={<TvShows />} />;
-      </Routes>
+      <div className="container">
+        {!location.pathname.includes("/movies/") && <Header />}
+        <Routes>
+          <Route path="/" element={<Navigate to="/movies" />} />
+          <Route path="/movies" element={<Movies />} />
+          ;
+          <Route path="/movies/:id" element={<Detail />} />
+          <Route path="/tv-shows" element={<TvShows />} />;
+        </Routes>
+      </div>
     </div>
   );
 }
