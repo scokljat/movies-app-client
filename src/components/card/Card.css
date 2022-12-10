@@ -3,12 +3,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 93%;
   padding: 20px;
   border: 1px solid black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.cardWrapper:hover {
+  transform: scale(1.1);
 }
 
 h1 {
   margin: 0;
   padding-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .cardWrapper {
+    width: 88%;
+  }
+}
+
+@media (max-width: 900px) {
+  .cardWrapper {
+    width: 90%;
+  }
 }

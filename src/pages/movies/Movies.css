@@ -1,7 +1,7 @@
 .cardContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.4rem;
+  gap: 40px;
   justify-items: center;
 }
 

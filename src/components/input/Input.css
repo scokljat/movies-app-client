@@ -1,0 +1,13 @@
+.inputWrapper {
+  margin: 20px 0;
+}
+
+input {
+  width: 98%;
+  height: 40px;
+  border-radius: 5px;
+}
+
+input::placeholder {
+  padding: 0 10px;
+}
