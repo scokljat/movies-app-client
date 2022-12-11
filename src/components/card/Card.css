@@ -4,8 +4,8 @@
   justify-content: center;
   align-items: center;
   width: 93%;
-  padding: 20px;
-  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 4px #b2b2b2;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -16,7 +16,15 @@
 
 h1 {
   margin: 0;
-  padding-top: 10px;
+  padding: 10px 0px;
+  font-size: 20px;
+}
+
+.image {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 500px;
 }
 
 @media (max-width: 900px) {

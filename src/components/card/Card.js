@@ -2,23 +2,24 @@ import { useNavigate } from "react-router-dom";
 
 import "./Card.css";
 
-function Card() {
+function Card({ movie, isTvShow, setItemId }) {
   const navigate = useNavigate();
 
   return (
     <div
       className="cardWrapper"
       onClick={() => {
-        navigate("/movies/50");
+        navigate(isTvShow ? `/tv-shows/${movie.id}` : `/movies/${movie.id}`);
+        setItemId(movie.id);
+        console.log(movie.id);
       }}
     >
       <img
-        src="https://imgv3.fotor.com/images/homepage-feature-card/enhance-photo-of-three-girls-playing-in-the-sunflower-garden.png"
+        src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}
+        className="image"
         alt="movie"
-        width="100%"
-        height="250px"
       />
-      <h1> Movie title</h1>
+      <h1>{isTvShow ? movie.name : movie.title}</h1>
     </div>
   );
 }

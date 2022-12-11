@@ -1,0 +1,29 @@
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 10%;
+  align-self: flex-start;
+}
+
+.button:hover {
+  background: #95bcf2;
+}
+
+.title {
+  align-self: flex-start;
+  padding: 10px 0px;
+  padding-top: 20px;
+}
+
+.description {
+  text-align: justify;
+}
