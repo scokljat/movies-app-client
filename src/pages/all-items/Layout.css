@@ -1,0 +1,18 @@
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  justify-items: center;
+}
+
+@media (max-width: 1100px) {
+  .cardContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 776px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+}

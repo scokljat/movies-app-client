@@ -10,9 +10,11 @@ function Navbar() {
         style={({ isActive }) =>
           isActive
             ? {
-                background: "#95bcf2",
+                //background: "#95bcf2",
+                background: "#36baff",
+                color: "#fff",
               }
-            : { background: "#fff" }
+            : { background: "#fff", color: "#000000" }
         }
       >
         Movies
@@ -24,9 +26,10 @@ function Navbar() {
         style={({ isActive }) =>
           isActive
             ? {
-                background: "#95bcf2",
+                background: "#36baff",
+                color: "#fff",
               }
-            : { background: "#fff" }
+            : { background: "#fff", color: "#000000" }
         }
       >
         TV Shows

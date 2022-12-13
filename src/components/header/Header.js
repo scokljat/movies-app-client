@@ -1,11 +1,11 @@
-import Navbar from "../../navbar/Navbar";
+import Navbar from "../navbar/Navbar";
 import Input from "../input/Input";
 
-function Header() {
+function Header({ setText }) {
   return (
     <>
       <Navbar />
-      <Input />
+      <Input onChange={(e) => setText(e.target.value)} />
     </>
   );
 }

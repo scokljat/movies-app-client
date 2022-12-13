@@ -1,12 +1,15 @@
 .navWrapper {
   display: flex;
   width: fit-content;
-  box-shadow: 5px 8px 6px black;
+  box-shadow: 5px 5px 4px #b2b2b2;
+  border: 1px solid #b2b2b2;
   align-self: flex-start;
+  margin-left: 5px;
+  border-radius: 5px;
 }
 
 .link {
   text-decoration: none;
-  border: 1px solid black;
   padding: 3px 10px;
+  border-radius: 5px;
 }

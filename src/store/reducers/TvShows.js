@@ -1,4 +1,8 @@
-import { FETCH_TVSHOWS, FETCH_TVSHOW } from "../constants/ActionTypes";
+import {
+  FETCH_TVSHOWS,
+  FETCH_TVSHOW,
+  FETCH_SEARCHED_TVSHOWS,
+} from "../constants/ActionTypes";
 
 const initialState = {
   tvShows: [],
@@ -11,6 +15,8 @@ export const reducerTvShows = (state = initialState, { type, payload }) => {
       return { ...state, tvShows: payload.results };
     case FETCH_TVSHOW:
       return { ...state, tvShow: payload };
+    case FETCH_SEARCHED_TVSHOWS:
+      return { ...state, tvShows: payload.results };
 
     default:
       return state;
