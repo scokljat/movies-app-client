@@ -2,19 +2,22 @@ import axios from "../http";
 
 const TvShowsService = {
   getTvShows: () => {
-    const url =
-      "https://api.themoviedb.org/3/tv/top_rated?api_key=8f785211e6cf5adfb92e23a8726c8145&language=en-US&page=1";
+    const url = `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&page=1`;
     return axios.get(url);
   },
 
   getTvShowById: (id) => {
-    console.log(id);
-    const url = `https://api.themoviedb.org/3/tv/${id}?api_key=8f785211e6cf5adfb92e23a8726c8145&language=en-US`;
+    const url = `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US`;
     return axios.get(url);
   },
 
   getSearchedTvShows: (text) => {
-    const url = `https://api.themoviedb.org/3/search/tv?api_key=8f785211e6cf5adfb92e23a8726c8145&language=en-US&query=${text}`;
+    const url = `https://api.themoviedb.org/3/search/tv?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&query=${text}`;
+    return axios.get(url);
+  },
+
+  getTvShowVideos: (id) => {
+    const url = `https://api.themoviedb.org/3/tv/${id}/videos?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US`;
     return axios.get(url);
   },
 };
