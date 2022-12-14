@@ -15,7 +15,6 @@ function MovieDetails() {
     dispatch(getMovieVideos(params.id));
   }, [dispatch, params]);
 
-  console.log(movie);
   return (
     <div className="detailContainer">
       <button className="button" onClick={() => navigate(-1)}>
