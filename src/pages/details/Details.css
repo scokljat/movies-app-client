@@ -38,6 +38,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
   margin-top: 0.63rem;
+  justify-items: center;
+}
+
+.video {
+  width: 80%;
+  height: 15rem;
 }
 
 .genreContainer {
@@ -94,5 +100,21 @@
 @media (max-width: 48.5rem) {
   .videoContainer {
     grid-template-columns: 1fr;
+  }
+
+  .button {
+    width: 15%;
+  }
+}
+
+@media (max-width: 34.3rem) {
+  .button {
+    width: 20%;
+  }
+}
+
+@media (max-width: 28.1rem) {
+  .button {
+    width: 30%;
   }
 }
