@@ -9,6 +9,12 @@ body {
   padding: 0.9rem 3.75rem;
 }
 
+@media (max-width: 34.3rem) {
+  .wrapper {
+    padding: 0;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
