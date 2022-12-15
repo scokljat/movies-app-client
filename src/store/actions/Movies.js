@@ -5,6 +5,7 @@ import {
   FETCH_SEARCHED_MOVIES,
   FETCH_MOVIE_VIDEOS,
 } from "../constants/ActionTypes";
+import { showToastMessage } from "../../components/toast/Toast";
 
 export const getMovies = () => async (dispatch) => {
   try {
@@ -12,7 +13,7 @@ export const getMovies = () => async (dispatch) => {
 
     dispatch({ type: FETCH_MOVIES, payload: data });
   } catch (error) {
-    console.log(error);
+    showToastMessage(error.response.data.status_message, "error");
   }
 };
 
@@ -22,7 +23,7 @@ export const getMovieById = (id) => async (dispatch) => {
 
     dispatch({ type: FETCH_MOVIE, payload: data });
   } catch (error) {
-    console.log(error);
+    showToastMessage(error.response.data.status_message, "error");
   }
 };
 
@@ -32,7 +33,7 @@ export const getSearchedMovies = (text) => async (dispatch) => {
 
     dispatch({ type: FETCH_SEARCHED_MOVIES, payload: data });
   } catch (error) {
-    console.log(error);
+    showToastMessage(error.response.data.status_message, "error");
   }
 };
 
@@ -42,6 +43,6 @@ export const getMovieVideos = (id) => async (dispatch) => {
 
     dispatch({ type: FETCH_MOVIE_VIDEOS, payload: data });
   } catch (error) {
-    console.log(error);
+    showToastMessage(error.response.data.status_message, "error");
   }
 };

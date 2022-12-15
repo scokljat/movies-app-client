@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 import Header from "./components/header/Header";
 import Movies from "./pages/all-items/Movies";
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="wrapper">
       <div className="container">
+        <Toaster position="top-center" reverseOrder={false} />
         {!location.pathname.includes("/movies/") &&
           !location.pathname.includes("/tv-shows/") && (
             <Header setText={setText} />
