@@ -19,7 +19,7 @@ Add .env.development.local file:
 
 ```
  REACT_APP_API_URL = REACT_APP_API_URL
- REACT_APP_TMDB_API_KEY=REACT_APP_TMDB_API_KEY
+ REACT_APP_TMDB_API_KEY = REACT_APP_TMDB_API_KEY
 ```
 
 For installing the dependencies run:
