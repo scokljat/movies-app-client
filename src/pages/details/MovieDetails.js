@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
+
 import { getMovieById, getMovieVideos } from "../../store/actions/Movies";
 import "./Details.css";
 
@@ -39,13 +40,9 @@ function MovieDetails() {
         {movieVideos?.map((video) => {
           if (video.type === "Trailer")
             return (
-              <video width="320" height="240" autoplay controls key={video?.id}>
+              <video className="video" autoPlay controls key={video?.id}>
                 <source
-                  width="560"
-                  height="315"
                   src={`https://www.youtube.com/watch?v=${video?.key}`}
-                  controls
-                  autoplay
                   key={video?.id}
                 />
               </video>

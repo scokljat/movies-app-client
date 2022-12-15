@@ -2,14 +2,14 @@ import { useNavigate } from "react-router-dom";
 
 import "./Card.css";
 
-function Card({ movie, isTvShow, setItemId }) {
+function Card({ movie, isTvShow }) {
   const navigate = useNavigate();
+
   return (
     <div
       className="cardWrapper"
       onClick={() => {
         navigate(isTvShow ? `/tv-shows/${movie.id}` : `/movies/${movie.id}`);
-        setItemId(movie.id);
       }}
     >
       <img
@@ -17,7 +17,7 @@ function Card({ movie, isTvShow, setItemId }) {
         className="image"
         alt="movie"
       />
-      <h1>{isTvShow ? movie.name : movie.title}</h1>
+      <h1 className="cardTitle">{isTvShow ? movie.name : movie.title}</h1>
     </div>
   );
 }

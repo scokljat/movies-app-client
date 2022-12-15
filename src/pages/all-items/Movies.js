@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+
 import Card from "../../components/card/Card";
-import { getMovies, getSearchedMovies } from "../../store/actions/Movies";
 import useDebounce from "../../components/search/UseDebounce";
+import { getMovies, getSearchedMovies } from "../../store/actions/Movies";
 import "./Layout.css";
 
 function Movies({ text }) {
@@ -13,7 +14,7 @@ function Movies({ text }) {
   const debouncedSearch = useDebounce(text, 500);
 
   useEffect(() => {
-    if (debouncedSearch) {
+    if (debouncedSearch && debouncedSearch.length > 3) {
       dispatch(getSearchedMovies(debouncedSearch));
     } else {
       dispatch(getMovies());

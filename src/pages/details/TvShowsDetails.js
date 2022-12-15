@@ -16,7 +16,7 @@ function TvShowsDetails() {
     dispatch(getTvShowById(params.id));
     dispatch(getTvShowVideos(params.id));
   }, [dispatch, params]);
-  console.log(tvShow);
+
   return (
     <div className="detailContainer">
       <button className="button" onClick={() => navigate(-1)}>
@@ -49,13 +49,9 @@ function TvShowsDetails() {
         {tvShowVideos?.map((video) => {
           if (video.type === "Trailer")
             return (
-              <video width="320" height="240" autoplay controls key={video?.id}>
+              <video className="video" key={video?.id} autoPlay controls>
                 <source
-                  width="560"
-                  height="315"
                   src={`https://www.youtube.com/watch?v=${video?.key}`}
-                  controls
-                  autoplay
                   key={video?.id}
                 />
               </video>

@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+
 import Card from "../../components/card/Card";
-import { getSearchedTvShows, getTvShows } from "../../store/actions/TvShows";
 import useDebounce from "../../components/search/UseDebounce";
+import { getSearchedTvShows, getTvShows } from "../../store/actions/TvShows";
 import "./Layout.css";
 
 function TvShows({ text }) {
@@ -12,7 +13,7 @@ function TvShows({ text }) {
   const debouncedSearch = useDebounce(text, 500);
 
   useEffect(() => {
-    if (debouncedSearch) {
+    if (debouncedSearch && debouncedSearch.length > 3) {
       dispatch(getSearchedTvShows(debouncedSearch));
     } else {
       dispatch(getTvShows());
