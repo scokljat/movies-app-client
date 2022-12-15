@@ -1,4 +1,4 @@
-# movies-app-client
+# [movies-app-client](https://movies-app-client.vercel.app/movies)
 
 ![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
@@ -19,7 +19,7 @@ Add .env.development.local file:
 
 ```
  REACT_APP_API_URL = REACT_APP_API_URL
- REACT_APP_TMDB_API_KEY=REACT_APP_TMDB_API_KEY
+ REACT_APP_TMDB_API_KEY = REACT_APP_TMDB_API_KEY
 ```
 
 For installing the dependencies run:
